@@ -55,7 +55,12 @@ class DetailsPage extends StatelessWidget {
                     children: [
                       ETHNueIcon(),
                       Gap(30),
-                      Text('Ethereum Balance'),
+                      Text(
+                        'Ethereum Balance',
+                        style: TextStyle(
+                          color: Color(0xFF717796),
+                        ),
+                      ),
                       Gap(5),
                       BlocBuilder<DetailCubit, DetailState>(
                         builder: (context, state) {
@@ -63,14 +68,23 @@ class DetailsPage extends StatelessWidget {
                             case ClptoDetailStatus.initial:
                             case ClptoDetailStatus.loadingExchangeBalance:
                             case ClptoDetailStatus.exchangeBalanceFailure:
-                              return Center(child: Text('\$0.00'));
+                              return Center(
+                                  child: Text(
+                                '\$0.00',
+                                style: TextStyle(color: Color(0xFFD2D6EF), fontSize: 35),
+                              ));
                             case ClptoDetailStatus.exchangeBalanceSuccess:
                               return Text(
                                 '${state.exchangeBalance!.clyptoData.clyptoBalnce}',
-                                style: TextStyle(fontSize: 40),
+                                style: TextStyle(color: Color(0xFFD2D6EF), fontSize: 35),
                               );
                             default:
-                              return Center(child: Text('\$0.00'));
+                              return Center(
+                                child: Text(
+                                  '\$0.00',
+                                  style: TextStyle(color: Color(0xFFD2D6EF), fontSize: 35),
+                                ),
+                              );
                           }
                         },
                       ),
@@ -99,7 +113,12 @@ class DetailsPage extends StatelessWidget {
                             ),
                           ),
                           Gap(3),
-                          Text('Daily'),
+                          Text(
+                            'Daily',
+                            style: TextStyle(
+                              color: Color(0xFF717796),
+                            ),
+                          ),
                         ],
                       ),
                       Text('24.320\$'),
@@ -122,7 +141,12 @@ class DetailsPage extends StatelessWidget {
                             ),
                           ),
                           Gap(3),
-                          Text('Daily'),
+                          Text(
+                            'Monthly',
+                            style: TextStyle(
+                              color: Color(0xFF717796),
+                            ),
+                          ),
                         ],
                       ),
                       Text('24.320\$'),
@@ -205,7 +229,7 @@ class ClyptoExchangeList extends StatelessWidget {
                 ],
               );
             default:
-            return Center(child: CircularProgressIndicator());
+              return Center(child: CircularProgressIndicator());
           }
         },
       ),

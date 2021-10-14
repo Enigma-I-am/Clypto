@@ -26,7 +26,7 @@ class HomePage extends StatelessWidget {
 
 class HomeView extends StatelessWidget {
   HomeView({Key? key}) : super(key: key);
-  
+
   final _navService = getIt<NavigationHandler>();
   @override
   Widget build(BuildContext context) {
@@ -46,9 +46,9 @@ class HomeView extends StatelessWidget {
                       Text(
                         'Hello',
                         style: TextStyle(
-                          fontSize: 10,
-                          fontWeight: FontWeight.normal,
-                          color: NeumorphicTheme.isUsingDark(context) ? Color(0xFFD2D6EF) : Color(0xFFD2D6EF),
+                          fontSize: 14,
+                          fontWeight: FontWeight.w400,
+                          color: NeumorphicTheme.isUsingDark(context) ? Color(0xFF717796) : Color(0xFF717796),
                         ),
                       ),
                       Gap(5),
@@ -56,7 +56,7 @@ class HomeView extends StatelessWidget {
                         'Jenny Doe',
                         style: TextStyle(
                           fontSize: 20,
-                          fontWeight: FontWeight.w500,
+                          fontWeight: FontWeight.w600,
                           color: NeumorphicTheme.isUsingDark(context) ? Color(0xFFD2D6EF) : Color(0xFFD2D6EF),
                         ),
                       ),
@@ -103,7 +103,17 @@ class HomeView extends StatelessWidget {
               Container(
                 margin: EdgeInsets.only(left: 12, right: 12, top: 10),
                 child: Row(
-                  children: [Text("Balance"), Spacer(), Text("\$8,540")],
+                  children: [
+                    Text(
+                      "Balance",
+                      style: TextStyle(color: Color(0xFFD2D6EF), fontSize: 16),
+                    ),
+                    Spacer(),
+                    Text(
+                      "\$8,540",
+                      style: TextStyle(color: Color(0xFF717796), fontSize: 16),
+                    )
+                  ],
                 ),
               ),
               Gap(20),
@@ -235,9 +245,15 @@ class CrptoIncomeExpense extends StatelessWidget {
             Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text(type),
+                Text(
+                  type,
+                  style: TextStyle(color: Color(0xFFD2D6EF),),
+                ),
                 Gap(5),
-                Text(amount),
+                Text(
+                  amount,
+                  style: TextStyle(color: Color(0xFF717796),),
+                ),
               ],
             ),
           ],

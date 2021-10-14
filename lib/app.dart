@@ -5,6 +5,7 @@ import 'package:clypto/utils/router.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_neumorphic/flutter_neumorphic.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 import 'di/di.dart';
 
@@ -15,7 +16,9 @@ class BlocLocator extends StatelessWidget {
   Widget build(BuildContext context) {
     return MultiBlocProvider(providers: [
       BlocProvider<DetailCubit>(
-        create: (context) => DetailCubit()..getExchanges()..getExchengeBalance(),
+        create: (context) => DetailCubit()
+          ..getExchanges()
+          ..getExchengeBalance(),
       ),
     ], child: App());
   }
@@ -38,11 +41,17 @@ class App extends StatelessWidget {
         baseColor: Color(0xFF3B405E),
         lightSource: LightSource.topLeft,
         depth: 10,
+        // textTheme: GoogleFonts.sofiaTextTheme(
+        //   Theme.of(context).textTheme,
+        // ),
       ),
       darkTheme: NeumorphicThemeData(
         baseColor: Color(0xFF3E3E3E),
         lightSource: LightSource.topLeft,
         depth: 6,
+        textTheme: GoogleFonts.latoTextTheme(
+          Theme.of(context).textTheme,
+        ),
       ),
       home: const HomePage(),
     );
