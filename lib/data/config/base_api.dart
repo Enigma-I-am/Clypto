@@ -20,19 +20,19 @@ abstract class BaseApi {
     );
 
     dio = Dio(options);
-    // if (kDebugMode) {
-    //   dio.interceptors.add(
-    //     PrettyDioLogger(
-    //       requestHeader: true,
-    //       requestBody: true,
-    //       responseBody: true,
-    //       responseHeader: false,
-    //       error: true,
-    //       compact: true,
-    //       maxWidth: 90,
-    //     ),
-    //   );
-    // }
+    if (kDebugMode) {
+      dio.interceptors.add(
+        PrettyDioLogger(
+          requestHeader: true,
+          requestBody: true,
+          responseBody: true,
+          responseHeader: false,
+          error: true,
+          compact: true,
+          maxWidth: 90,
+        ),
+      );
+    }
   }
 
   Future<Map<String, dynamic>> get(path, {Map<String, dynamic> headers = const {}}) => makeRequest(

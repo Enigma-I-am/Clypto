@@ -30,7 +30,7 @@ class DetailsPage extends StatelessWidget {
                       Text(
                         'Overview',
                         style: TextStyle(
-                          fontSize: 20,
+                          fontSize: 25,
                           fontWeight: FontWeight.normal,
                           color: NeumorphicTheme.isUsingDark(context) ? Color(0xFFD2D6EF) : Color(0xFFD2D6EF),
                         ),
@@ -45,7 +45,7 @@ class DetailsPage extends StatelessWidget {
                   ],
                 ),
               ),
-              Gap(10),
+              Gap(20),
               // Overview item
               Row(
                 children: [

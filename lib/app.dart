@@ -17,8 +17,8 @@ class BlocLocator extends StatelessWidget {
     return MultiBlocProvider(providers: [
       BlocProvider<DetailCubit>(
         create: (context) => DetailCubit()
-          ..getExchanges()
-          ..getExchengeBalance(),
+          ..getExchanges(),
+          // ..getExchengeBalance(),
       ),
     ], child: App());
   }

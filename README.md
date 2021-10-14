@@ -1,5 +1,7 @@
 # Clypto
 
+![shot 1](./screenshots/clypto_01.png)
+![shot 1](./screenshots/clypto_02.png)
 ---
 
 ## Getting Started 🚀
