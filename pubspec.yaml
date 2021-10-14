@@ -1,0 +1,44 @@
+name: clypto
+description: A Very Good Project created by Very Good CLI.
+version: 1.0.0+1
+publish_to: none
+
+environment:
+  sdk: ">=2.13.0 <3.0.0"
+
+dependencies:
+  bloc: ^7.2.0
+  dio: ^4.0.0
+  equatable: ^2.0.3
+  fl_chart: ^0.40.0
+  flutter:
+    sdk: flutter
+  flutter_bloc: ^7.3.0
+  flutter_dotenv: ^5.0.2
+  flutter_localizations:
+    sdk: flutter
+  flutter_neumorphic: ^3.1.0
+  flutter_svg: ^0.22.0
+  gap: ^2.0.0
+  get_it: ^7.2.0
+  intl: ^0.17.0
+  logger: ^1.1.0
+  pretty_dio_logger: ^1.1.1
+  rxdart: ^0.27.2
+  shared_preferences: ^2.0.5
+  truncate: ^3.0.1
+
+dev_dependencies:
+  bloc_test: ^8.2.0
+  flutter_test:
+    sdk: flutter
+  mocktail: ^0.1.0
+  pedantic: ^1.11.1
+
+flutter:
+  uses-material-design: true
+  generate: true
+  assets:
+    - assets/
+    - assets/svg/
+    - .env
