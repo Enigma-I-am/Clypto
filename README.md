@@ -1,7 +1,6 @@
 # Clypto
 
-![shot 1](./screenshots/clypto_01.png)
-![shot 1](./screenshots/clypto_02.png)
+<img src="screenshots/clypto_01.png" height="480px"/> <img src="screenshots/clypto_02.png" height="480px"/> 
 ---
 
 ## Getting Started 🚀
